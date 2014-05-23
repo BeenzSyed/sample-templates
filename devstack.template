@@ -83,7 +83,15 @@ parameters:
       description: must be between 1 and 41 characters
     - allowed_pattern: "[a-zA-Z0-9]*"
       description : must contain only alphanumeric characters.
-
+  
+  enable_heat:
+    default: "false"
+    description: Enable the Heat service in Devstack
+    type: string
+    constraints:
+    - allowed_values: ["true", "false"]
+      description: must be either "true" or "false"
+      
   devstack_branch:
     default: "master"
     description: Devstack branch to clone
